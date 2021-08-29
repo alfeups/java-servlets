@@ -19,8 +19,7 @@ public class Banco {
 	}
 
 	public void adiciona(Empresa empresa) {
-		// TODO Auto-generated method stub
-		
+		Banco.lista.add(empresa);
 	}
 	
 	public List<Empresa> getEmpresas (){

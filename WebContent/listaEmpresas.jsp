@@ -1,25 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import="java.util.List, br.com.gerenciador.servlet.Empresa"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Java Standard Taglib</title>
 </head>
 <body>
 	Lista de empresas: <br />
 
 	<ul>
-	<%
-		List<Empresa> lista = (List<Empresa>)request.getAttribute("empresas");
+		<c:forEach items="${empresas}" var="empresa">
 		
-		for (Empresa empresa : lista) {
-	%>
-			<li><%= empresa.getNome() %>
-	<%
-		}
-	 %>
+		</c:forEach>
 	</ul>
 
 </body>
